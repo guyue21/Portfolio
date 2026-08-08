@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — 古月</title>
+  <meta name="description" content="古月 — 视觉设计师 & 手绘插画师，上海师范大学美术学院" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">GY<span class="dot">.</span></a>
+      <nav>
+        <ul class="nav__links" id="navLinks">
+          <li><a href="#about" data-key="nav-about">关于</a></li>
+          <li><a href="#experience" data-key="nav-experience">经历</a></li>
+          <li><a href="#work" data-key="nav-work">作品</a></li>
+          <li><a href="#messages" data-key="nav-messages">留言</a></li>
+          <li><a href="#contact" data-key="nav-contact">联系</a></li>
+          <li class="nav__add-item" id="navAddBtn" style="display: none;">
+            <button title="添加导航项">+</button>
+          </li>
+        </ul>
+      </nav>
+      <button class="nav__toggle" id="navToggle" aria-label="菜单">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <ul id="mobileMenuLinks">
+      <li><a href="#about" class="menu-link" data-key="nav-about">关于</a></li>
+      <li><a href="#experience" class="menu-link" data-key="nav-experience">经历</a></li>
+      <li><a href="#work" class="menu-link" data-key="nav-work">作品</a></li>
+      <li><a href="#messages" class="menu-link" data-key="nav-messages">留言</a></li>
+      <li><a href="#contact" class="menu-link" data-key="nav-contact">联系</a></li>
+      <li class="mobile-menu__add-item" id="mobileNavAddBtn" style="display: none;">
+        <button title="添加导航项">+ 添加导航</button>
+      </li>
+    </ul>
+  </div>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="hero__content">
+        <p class="hero__eyebrow fade-in" data-key="hero-eyebrow">Visual Designer &amp; Illustrator</p>
+        <h1 class="hero__title fade-in delay-1" data-key="hero-title">
+          Hi, I'm <em>古月</em><span class="dot">.</span>
+        </h1>
+        <p class="hero__desc fade-in delay-2" data-key="hero-desc">
+          上海师范大学美术学院在读，兼具艺术审美与商业设计思维。<br />
+          专注品牌视觉、海报设计与手绘插画创作。
+        </p>
+        <div class="hero__actions fade-in delay-3">
+          <a href="#work" class="btn btn--primary">查看作品</a>
+          <a href="#contact" class="btn btn--ghost">联系我</a>
+        </div>
+      </div>
+      <div class="hero__scroll-hint" aria-hidden="true">
+        <span>向下滚动</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about section" id="about">
+      <div class="container">
+        <div class="section__label">关于我</div>
+        <div class="about__grid">
+          <div class="about__text">
+            <h2 class="section__title" data-key="about-title">热爱<em>绘画</em>，<br />探索<em>设计</em>。</h2>
+            <p data-key="about-p1">我是一名就读于上海师范大学的美术学师范类学生，始终怀揣对绘画与艺术设计的热忱。</p>
+            <p data-key="about-p2">在创作中，我既醉心于手绘创作的细腻质感，也热衷用 PS、AI、Procreate、Figma 等软件探索数字艺术的多元可能。日常运营自媒体的经历，让我在分享中持续打磨视觉表达与内容逻辑。</p>
+            <div class="about__skills">
+              <div class="skill-tag" data-key="skill-1">Photoshop</div>
+              <div class="skill-tag" data-key="skill-2">Illustrator</div>
+              <div class="skill-tag" data-key="skill-3">Procreate</div>
+              <div class="skill-tag" data-key="skill-4">Figma</div>
+              <div class="skill-tag" data-key="skill-5">AU/PR</div>
+              <div class="skill-tag" data-key="skill-6">手绘插画</div>
+              <div class="skill-tag" data-key="skill-7">视频剪辑</div>
+              <div class="skill-tag" data-key="skill-8">自媒体运营</div>
+            </div>
+          </div>
+          <div class="about__photo">
+            <div class="photo-placeholder" id="aboutPhoto">
+              <img src="images/profile.jpg" alt="古月 - 个人照片" class="about__photo-img" style="width:100%;height:100%;object-fit:cover;" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="experience section" id="experience">
+      <div class="container">
+        <div class="section__label">实习经历</div>
+        <h2 class="section__title">Work <em>Experience</em></h2>
+        <div class="exp__list" id="expList">
+
+          <div class="exp__item" data-exp-id="1">
+            <button class="item-delete-btn" data-delete-type="exp" data-delete-id="1" title="删除">×</button>
+            <div class="exp__meta">
+              <div class="exp__period" data-key="exp-1-period">2025.04 — 2025.07</div>
+              <div class="exp__tag" data-key="exp-1-tag">平面设计</div>
+            </div>
+            <div class="exp__content">
+              <h3 class="exp__company" data-key="exp-1-company">锦江丽笙酒店</h3>
+              <p class="exp__role" data-key="exp-1-role">品牌设计实习生</p>
+              <p class="exp__desc" data-key="exp-1-desc">独立执行线下海报、APP 滚动 Banner、小程序首页 Banner 全流程设计，共完成 10 套物料并 100% 通过审核投入使用。</p>
+            </div>
+          </div>
+
+          <div class="exp__item" data-exp-id="2">
+            <button class="item-delete-btn" data-delete-type="exp" data-delete-id="2" title="删除">×</button>
+            <div class="exp__meta">
+              <div class="exp__period" data-key="exp-2-period">2025.07 — 2025.10</div>
+              <div class="exp__tag" data-key="exp-2-tag">视觉设计</div>
+            </div>
+            <div class="exp__content">
+              <h3 class="exp__company" data-key="exp-2-company">上海水务规划设计院</h3>
+              <p class="exp__role" data-key="exp-2-role">视觉设计实习生</p>
+              <p class="exp__desc" data-key="exp-2-desc">参与院内宣传物料与报告的视觉设计排版，积累了专业机构品牌视觉的实战经验。</p>
+            </div>
+          </div>
+
+          <div class="exp__item" data-exp-id="3">
+            <button class="item-delete-btn" data-delete-type="exp" data-delete-id="3" title="删除">×</button>
+            <div class="exp__meta">
+              <div class="exp__period" data-key="exp-3-period">2025.10 — 2026.01</div>
+              <div class="exp__tag" data-key="exp-3-tag">UI 设计</div>
+            </div>
+            <div class="exp__content">
+              <h3 class="exp__company" data-key="exp-3-company">异乡好居</h3>
+              <p class="exp__role" data-key="exp-3-role">UI / 运营设计实习生</p>
+              <p class="exp__desc" data-key="exp-3-desc">负责平台 H5 页面、活动 Banner 及推广海报的视觉输出，深入了解互联网产品的设计规范与迭代流程。</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Add experience button (edit mode only) -->
+        <button class="add-item-btn" id="addExpBtn">
+          <span class="add-item-btn__icon">+</span>
+          <span>添加经历</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Work -->
+    <section class="work section" id="work">
+      <div class="container">
+        <div class="section__label">作品集</div>
+        <h2 class="section__title">Selected <em>Works</em></h2>
+
+        <div class="filter" id="filter">
+          <!-- 动态生成过滤按钮 -->
+        </div>
+
+        <div class="work__grid" id="workGrid">
+
+          <article class="work__card" data-category="graphic" data-card-id="1">
+            <div class="card__img card__img--1">
+              <img src="images/work-1.png" alt="LADY SNOWBLOOD 电影海报" />
+              <div class="card__img-edit-hint">点击更换图片</div>
+              <div class="card__overlay"><a href="#" class="card__link">查看作品 →</a></div>
+              <button class="item-delete-btn" data-delete-type="card" data-delete-id="1" title="删除">×</button>
+            </div>
+            <div class="card__info">
+              <span class="card__tag" data-key="card-1-tag">平面设计</span>
+              <h3 class="card__title" data-key="card-1-title">LADY SNOWBLOOD 电影海报</h3>
+              <p class="card__desc" data-key="card-1-desc">以日本经典电影为主题，通过照片多重处理与拼接排版，呈现黑白叙事风格的 A3 创意海报。</p>
+            </div>
+          </article>
+
+          <article class="work__card" data-category="graphic" data-card-id="2">
+            <div class="card__img card__img--2">
+              <img src="images/work-2.png" alt="生活杂志·圣诞系列" />
+              <div class="card__img-edit-hint">点击更换图片</div>
+              <div class="card__overlay"><a href="#" class="card__link">查看作品 →</a></div>
+              <button class="item-delete-btn" data-delete-type="card" data-delete-id="2" title="删除">×</button>
+            </div>
+            <div class="card__info">
+              <span class="card__tag" data-key="card-2-tag">平面 · 插画</span>
+              <h3 class="card__title" data-key="card-2-title">生活杂志·圣诞系列</h3>
+              <p class="card__desc" data-key="card-2-desc">以十二月为主题的生活海报插图设计，小清新风格，采用传统杂志排版，饱和度高的对比色与互补色衬托氛围。</p>
+            </div>
+          </article>
+
+          <article class="work__card" data-category="graphic" data-card-id="3">
+            <div class="card__img card__img--3">
+              <img src="images/work-3.png" alt="THE SUBSTANCE 电影海报" />
+              <div class="card__img-edit-hint">点击更换图片</div>
+              <div class="card__overlay"><a href="#" class="card__link">查看作品 →</a></div>
+              <button class="item-delete-btn" data-delete-type="card" data-delete-id="3" title="删除">×</button>
+            </div>
+            <div class="card__info">
+              <span class="card__tag" data-key="card-3-tag">平面设计</span>
+              <h3 class="card__title" data-key="card-3-title">THE SUBSTANCE 电影海报</h3>
+              <p class="card__desc" data-key="card-3-desc">黑白叙事风格创意海报，通过素材拼接与设计，将电影核心命题"成为更好版本的自己"视觉化呈现。</p>
+            </div>
+          </article>
+
+          <article class="work__card" data-category="graphic" data-card-id="4">
+            <div class="card__img card__img--4">
+              <img src="images/work-4.png" alt="锦江丽笙酒店 品牌物料" />
+              <div class="card__img-edit-hint">点击更换图片</div>
+              <div class="card__overlay"><a href="#" class="card__link">查看作品 →</a></div>
+              <button class="item-delete-btn" data-delete-type="card" data-delete-id="4" title="删除">×</button>
+            </div>
+            <div class="card__info">
+              <span class="card__tag" data-key="card-4-tag">平面设计</span>
+              <h3 class="card__title" data-key="card-4-title">锦江丽笙酒店 品牌物料</h3>
+              <p class="card__desc" data-key="card-4-desc">独立执行线下海报、APP 滚动 Banner、小程序首页 Banner 全流程设计，10套物料100%通过审核投入使用。</p>
+            </div>
+          </article>
+
+          <article class="work__card" data-category="ui" data-card-id="5">
+            <div class="card__img card__img--5">
+              <img src="images/work-5.png" alt="健身小程序 UI" />
+              <div class="card__img-edit-hint">点击更换图片</div>
+              <div class="card__overlay"><a href="#" class="card__link">查看作品 →</a></div>
+              <button class="item-delete-btn" data-delete-type="card" data-delete-id="5" title="删除">×</button>
+            </div>
+            <div class="card__info">
+              <span class="card__tag" data-key="card-5-tag">UI 设计</span>
+              <h3 class="card__title" data-key="card-5-title">健身小程序 UI 界面设计</h3>
+              <p class="card__desc" data-key="card-5-desc">微信健身小程序界面交互设计，涵盖运动打卡、数据记录、社区互动等核心功能模块的移动端 UI 设计。</p>
+            </div>
+          </article>
+
+          <article class="work__card" data-category="ui" data-card-id="6">
+            <div class="card__img card__img--6">
+              <img src="images/work-6.png" alt="深蓝卫士·海洋清理机器人" />
+              <div class="card__img-edit-hint">点击更换图片</div>
+              <div class="card__overlay"><a href="#" class="card__link">查看作品 →</a></div>
+              <button class="item-delete-btn" data-delete-type="card" data-delete-id="6" title="删除">×</button>
+            </div>
+            <div class="card__info">
+              <span class="card__tag" data-key="card-6-tag">产品设计</span>
+              <h3 class="card__title" data-key="card-6-title">深蓝卫士·海洋清理机器人</h3>
+              <p class="card__desc" data-key="card-6-desc">采用仿生设计与 AI 技术的智能海洋清洁机器人，专注解决海洋塑料污染与油污泄漏问题的 3D 产品设计。</p>
+            </div>
+          </article>
+
+          <article class="work__card" data-category="ui" data-card-id="7">
+            <div class="card__img card__img--7">
+              <img src="images/work-7.png" alt="绿源3D·学校食堂堆肥机" />
+              <div class="card__img-edit-hint">点击更换图片</div>
+              <div class="card__overlay"><a href="#" class="card__link">查看作品 →</a></div>
+              <button class="item-delete-btn" data-delete-type="card" data-delete-id="7" title="删除">×</button>
+            </div>
+            <div class="card__info">
+              <span class="card__tag" data-key="card-7-tag">产品设计</span>
+              <h3 class="card__title" data-key="card-7-title">绿源3D·学校食堂堆肥机</h3>
+              <p class="card__desc" data-key="card-7-desc">专为学校食堂设计的智能有机废弃物处理系统，将餐厨垃圾转化为高品质有机肥料，实现资源循环利用。</p>
+            </div>
+          </article>
+
+          <article class="work__card" data-category="painting" data-card-id="8">
+            <div class="card__img card__img--8">
+              <img src="images/work-8.png" alt="绘画系列·国画" />
+              <div class="card__img-edit-hint">点击更换图片</div>
+              <div class="card__overlay"><a href="#" class="card__link">查看作品 →</a></div>
+              <button class="item-delete-btn" data-delete-type="card" data-delete-id="8" title="删除">×</button>
+            </div>
+            <div class="card__info">
+              <span class="card__tag" data-key="card-8-tag">绘画</span>
+              <h3 class="card__title" data-key="card-8-title">绘画系列·油画 / 国画 / 版画</h3>
+              <p class="card__desc" data-key="card-8-desc">涵盖油画（具象与抽象）、国画（工笔花鸟）、版画、板绘等多种媒介的综合绘画作品创作。</p>
+            </div>
+          </article>
+
+          <article class="work__card" data-category="animation" data-card-id="9">
+            <div class="card__img card__img--1">
+              <img src="images/work-1.png" alt="动画项目示意" />
+              <div class="card__img-edit-hint">点击更换图片</div>
+              <div class="card__overlay"><a href="#" class="card__link">查看作品 →</a></div>
+              <button class="item-delete-btn" data-delete-type="card" data-delete-id="9" title="删除">×</button>
+            </div>
+            <div class="card__info">
+              <span class="card__tag" data-key="card-9-tag">动画 / 视频</span>
+              <h3 class="card__title" data-key="card-9-title">动画短片 Demo</h3>
+              <p class="card__desc" data-key="card-9-desc">短片动画演示项目，包含故事板、运动设计与渲染效果，展示动态品牌插画风格。</p>
+            </div>
+          </article>
+
+          <article class="work__card" data-category="photography" data-card-id="10">
+            <div class="card__img card__img--2">
+              <img src="images/work-2.png" alt="摄影作品集" />
+              <div class="card__img-edit-hint">点击更换图片</div>
+              <div class="card__overlay"><a href="#" class="card__link">查看作品 →</a></div>
+              <button class="item-delete-btn" data-delete-type="card" data-delete-id="10" title="删除">×</button>
+            </div>
+            <div class="card__info">
+              <span class="card__tag" data-key="card-10-tag">摄影</span>
+              <h3 class="card__title" data-key="card-10-title">摄影系列·城市与人文</h3>
+              <p class="card__desc" data-key="card-10-desc">街头摄影与人文故事捕捉，强调光影与构图，通过镜头讲述城市生活记忆。</p>
+            </div>
+          </article>
+
+          <article class="work__card" data-category="other" data-card-id="11">
+            <div class="card__img card__img--3">
+              <img src="images/work-3.png" alt="跨界设计实验" />
+              <div class="card__img-edit-hint">点击更换图片</div>
+              <div class="card__overlay"><a href="#" class="card__link">查看作品 →</a></div>
+              <button class="item-delete-btn" data-delete-type="card" data-delete-id="11" title="删除">×</button>
+            </div>
+            <div class="card__info">
+              <span class="card__tag" data-key="card-11-tag">其他</span>
+              <h3 class="card__title" data-key="card-11-title">跨界创意实验</h3>
+              <p class="card__desc" data-key="card-11-desc">跨领域视觉实验，结合互动设计与装置艺术探索感官表达与用户体验。</p>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Add card button (edit mode only) -->
+        <button class="add-card-btn" id="addCardBtn">
+          <span class="add-card-btn__icon">+</span>
+          <span>添加作品</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Messages / Contact Info -->
+    <section class="messages section" id="messages">
+      <div class="container">
+        <div class="section__label">联系方式</div>
+        <div class="messages__inner">
+          <h2 class="section__title">连接<em>我吧</em><span class="dot">.</span></h2>
+          <p class="messages__sub">选择你喜欢的方式与我联系 💬</p>
+
+          <div class="contact-methods">
+            <!-- Email -->
+            <a href="mailto:guy71777@gmail.com" class="contact-method" data-copy="guy71777@gmail.com">
+              <div class="contact-method__icon">✉️</div>
+              <div class="contact-method__content">
+                <h3 class="contact-method__title">Email</h3>
+                <p class="contact-method__value">guy71777@gmail.com</p>
+              </div>
+            </a>
+
+            <!-- Phone -->
+            <a href="tel:18863967211" class="contact-method" data-copy="18863967211">
+              <div class="contact-method__icon">📱</div>
+              <div class="contact-method__content">
+                <h3 class="contact-method__title">Phone</h3>
+                <p class="contact-method__value">188 6396 7211</p>
+              </div>
+            </a>
+
+            <!-- WeChat -->
+            <a href="#" class="contact-method" data-copy="Guyue0459">
+              <div class="contact-method__icon">💬</div>
+              <div class="contact-method__content">
+                <h3 class="contact-method__title">WeChat</h3>
+                <p class="contact-method__value">Guyue0459</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact section" id="contact">
+      <div class="container">
+        <div class="section__label">联系我</div>
+        <div class="contact__inner">
+          <h2 class="contact__title" data-key="contact-title">有项目合作<br />或者只是想打个招呼？</h2>
+          <p class="contact__sub" data-key="contact-sub">我随时欢迎新的合作机会与创意交流。</p>
+          <a href="mailto:guy71777@gmail.com" class="btn btn--primary btn--lg">发送邮件</a>
+          <div class="contact__social">
+            <a href="#" target="_blank" rel="noopener">Behance</a>
+            <a href="#" target="_blank" rel="noopener">Dribbble</a>
+            <a href="#" target="_blank" rel="noopener">Instagram</a>
+            <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <span>© 2026 古月 — Designed &amp; Built by yourself.</span>
+        <button id="shareQrcodeBtn" class="footer__share-btn" title="分享二维码">📱 分享</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- QR Code Modal -->
+  <div class="qrcode-modal" id="qrcodeModal">
+    <div class="qrcode-modal__content">
+      <button class="qrcode-modal__close" id="qrcodeCloseBtn">×</button>
+      <h3 class="qrcode-modal__title">分享我的作品集</h3>
+      <div id="qrcodeContainer" class="qrcode-modal__qrcode"></div>
+      <p class="qrcode-modal__desc">扫描二维码分享我的作品集</p>
+    </div>
+  </div>
+
+  <!-- Password Modal -->
+  <div class="pwd-modal" id="pwdModal">
+    <div class="pwd-modal__box">
+      <p class="pwd-modal__title">进入编辑模式</p>
+      <input type="password" id="pwdInput" class="pwd-modal__input" placeholder="请输入密码" autocomplete="off" />
+      <p class="pwd-modal__error" id="pwdError">密码错误，请重试</p>
+      <div class="pwd-modal__actions">
+        <button class="edit-action-btn edit-action-btn--cancel" id="pwdCancelBtn">取消</button>
+        <button class="edit-action-btn edit-action-btn--save" id="pwdConfirmBtn">确认</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit Toolbar -->
+  <div class="edit-toolbar">
+    <div class="edit-save-bar" id="editSaveBar">
+      <button class="edit-action-btn edit-action-btn--cancel" id="cancelBtn">取消</button>
+      <button class="edit-action-btn edit-action-btn--save" id="saveBtn">保存</button>
+    </div>
+    <button class="edit-trigger-btn" id="editBtn">✏ 编辑</button>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/interactions.js"></script>
+</body>
+</html>
